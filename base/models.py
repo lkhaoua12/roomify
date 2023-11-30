@@ -24,6 +24,9 @@ class Room(models.Model):
         """ returns string rep of table """
         return self.name
 
+    class Meta:
+        ordering = ['-updated', 'created']
+
 
 class Message(models.Model):
     """ the messages table """
