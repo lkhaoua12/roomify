@@ -17,8 +17,9 @@ class Room(models.Model):
     description = models.TextField(null=True, blank=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
-    topic = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
+    topic = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True, related_name='rooms')
     owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    participants = models.ManyToManyField(User, related_name='participants', blank=True)
 
     def __str__(self):
         """ returns string rep of table """
@@ -31,11 +32,11 @@ class Room(models.Model):
 class Message(models.Model):
     """ the messages table """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='messages')
     body = models.TextField()
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         """ returns trimmed version of Message """
-        return self.body
+        return self.body[:50]
