@@ -66,14 +66,6 @@ python manage.py runserver
 
 #
 ### App preview
-<table width="100%"> 
-<tr>
-<td width="50%">      
-&nbsp; 
-<br>
 <p align="center">
-  Feed Home
+  <img src="https://i.imgur.com/BxxVOTf.png" alt="Roomify Logo">
 </p>
-<img src="[https://imgur.com/a/JhN6hlm](https://i.imgur.com/BxxVOTf.png)https://i.imgur.com/BxxVOTf.png">
-</table>
-
