@@ -65,3 +65,15 @@ python manage.py runserver
 > ⚠ Then, the development server will be started at http://127.0.0.1:8000/
 
 #
+### App preview
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+  Feed Home
+</p>
+<img src="[https://imgur.com/a/JhN6hlm](https://i.imgur.com/BxxVOTf.png)https://i.imgur.com/BxxVOTf.png">
+</table>
+
